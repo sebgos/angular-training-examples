@@ -1,1 +1,19 @@
-<app-my-component></app-my-component>
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+  <p class="lead"><app-my-component></app-my-component></p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button" (click)="doShowWarning()">Learn more</a>
+  </p>
+  <div *ngIf="showWarning" class="alert alert-danger" role="alert">
+    Error: Ups! Something went wrong!
+  </div>
+  <p *appMyDirective="true">
+    This paragraph is displayed
+  </p>
+  <p *appMyDirective="false">
+    This paragraph is removed from the DOM.
+  </p>
+</div>
+
