@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Stackblitz examples
 
 01 Component: https://stackblitz.com/github/sebgos/angular-training-examples/tree/01_component
+
 02 Directive: https://stackblitz.com/github/sebgos/angular-training-examples/tree/02_directive
 
 ## Development server
