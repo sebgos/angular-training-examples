@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 02 Directive: https://stackblitz.com/github/sebgos/angular-training-examples/tree/02_directive
 
+02 Pipe: https://stackblitz.com/github/sebgos/angular-training-examples/tree/03_pipe
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

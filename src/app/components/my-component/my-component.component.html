@@ -1,1 +1,11 @@
-<p>my-component works!</p>
+<p>Price: {{price | currency}}</p>
+<p>Date: {{date | date:'dd/MM/yyyy'}}</p>
+<p>myPipe:{{ active }}
+  <br><br>
+  <button (click)="active = !active" type="button" class="btn btn-outline-primary">
+    Activate/Deactivate myPipe
+  </button>
+</p>
+<p> Password: {{ password | myPipe: active}}</p>
+<br>
+<app-my-observable-async-component></app-my-observable-async-component>
