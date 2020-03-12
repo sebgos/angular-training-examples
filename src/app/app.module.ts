@@ -1,26 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountService } from './account.service';
+import { AccountComponent } from './account/account.component';
 import { AppComponent } from './app.component';
-import { MyComponentComponent } from './components/my-component/my-component.component';
-import { MyDirectiveDirective } from './directives/my-directive.directive';
-import { MyPipePipe } from './pipes/my-pipe.pipe';
-import { MyObservableAsyncComponentComponent } from './components/my-observable-async-component/my-observable-async-component.component';
+import { LoggerService } from './logger.service';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponentComponent,
-    MyDirectiveDirective,
-    MyPipePipe,
-    MyObservableAsyncComponentComponent
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [LoggerService, AccountService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
