@@ -10,7 +10,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 03 Pipe: https://stackblitz.com/github/sebgos/angular-training-examples/tree/03_pipe
 
-04 Service: https://stackblitz.com/github/sebgos/angular-training-examples/tree/04_Service
+04 Service: https://stackblitz.com/github/sebgos/angular-training-examples/tree/04_service
+
+05 Components communication (service): https://stackblitz.com/github/sebgos/angular-training-examples/tree/05_components_communication
+
+05 Components communication (through parent): https://stackblitz.com/github/sebgos/angular-training-examples/tree/05_a_components_communication
+
+05 Components communication (through reference): https://stackblitz.com/github/sebgos/angular-training-examples/tree/05_b_components_communication
 
 ## Development server
 

@@ -1,25 +1,20 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { AccountService } from './account.service';
-import { AccountComponent } from './account/account.component';
+import { NgModule } from '@angular/core';
+
 import { AppComponent } from './app.component';
-import { LoggerService } from './logger.service';
-import { NewAccountComponent } from './new-account/new-account.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { SideBarToggleComponent } from './side-bar-toggle/side-bar-toggle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponent,
-    NewAccountComponent
+    SideBarComponent,
+    SideBarToggleComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
+    BrowserModule
   ],
-  providers: [LoggerService, AccountService],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
