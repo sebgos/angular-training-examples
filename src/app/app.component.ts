@@ -1,25 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Account } from './account';
-import { AccountService } from './account.service';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import {MessageService} from "./message.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app',
+    templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
 
-  accounts: Account[] = [];
+export class AppComponent implements OnDestroy {
+    message: any;
+    subscription: Subscription;
 
-  constructor(private accountService: AccountService) {}
+    constructor(private messageService: MessageService) {
+        // subscribe to home component messages
+        this.subscription = this.messageService.getMessage().subscribe(message => { this.message = message; });
+    }
 
-  ngOnInit(): void {
-    this.accountService.getAccounts().subscribe(accounts => this.accounts = accounts);
-
-    this.accountService.accountsChanged.subscribe(
-      (accounts: Account[]) => this.accounts = accounts
-    )
-  }
-
+    ngOnDestroy() {
+        // unsubscribe to ensure no memory leaks
+        this.subscription.unsubscribe();
+    }
 }
