@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TemplateDrivenComponent } from './template-driven.component';
+import { ReactiveComponent } from './reactive.component';
 
-describe('TemplateDrivenComponent', () => {
-  let component: TemplateDrivenComponent;
-  let fixture: ComponentFixture<TemplateDrivenComponent>;
+describe('ReactiveComponent', () => {
+  let component: ReactiveComponent;
+  let fixture: ComponentFixture<ReactiveComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateDrivenComponent ]
+      declarations: [ ReactiveComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TemplateDrivenComponent);
+    fixture = TestBed.createComponent(ReactiveComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
